@@ -15,6 +15,13 @@ tasks = [
     {"id": 3, "task": "GenAI"}
 ]
 
+@app.get("/")
+def home(): 
+    return {"message": "Welcome to Git"}
+
+@app.get("/tasks")
+def get_tasks():
+    return tasks
 @app.get("/employees")
 def employees_data():
     return employees
