@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-#from app.schemas import Employee
 
 app = FastAPI()
 
@@ -23,3 +22,6 @@ def home():
 @app.get("/tasks")
 def get_tasks():
     return tasks
+@app.get("/employees")
+def employees_data():
+    return employees
