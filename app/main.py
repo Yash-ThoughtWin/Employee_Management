@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-#from app.schemas import Employee
 
 app = FastAPI()
 
@@ -16,7 +15,6 @@ tasks = [
     {"id": 3, "task": "GenAI"}
 ]
 
-@app.get("/")
-def home(): 
-    return {"message": "Welcome to Git"}
-
+@app.get("/employees")
+def employees_data():
+    return employees
