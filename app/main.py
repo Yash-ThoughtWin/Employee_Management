@@ -20,3 +20,6 @@ tasks = [
 def home(): 
     return {"message": "Welcome to Git"}
 
+@app.get("/tasks")
+def get_tasks():
+    return tasks
